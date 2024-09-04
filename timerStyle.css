@@ -1,0 +1,227 @@
+body {
+  background: #e7e5e5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0;
+  font-display: swap;
+  /* detta gör att texten vissas med annan font om den inlagda fonten inte hunnit laddas  */
+
+
+}
+
+:root {
+  --black: rgb(53, 53, 53);
+  --bg-dark: rgb(54, 54, 54);
+  --action: #f4a261;
+  --action-hover: #f08833;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.timerSection {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.239);
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.row {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  flex-wrap: wrap;
+}
+
+.rowSpaceBetween {
+  display: flex;
+  min-width: 300px;
+  max-width: 500px;
+
+
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.clockContainer {
+  background: #e9e7e5;
+  padding: 5px 5px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(214, 202, 202);
+  font-size: 30px;
+}
+
+.timeInput {
+  background-color: #f4a36100;
+  border: none;
+  width: 40px;
+  font-size: 30px;
+
+}
+
+.timeRange {
+  width: 300px;
+  cursor: pointer;
+  background: #e9e1e1;
+  height: 7px;
+  border: 1px solid #333;
+  border-radius: 10px;
+
+
+}
+
+.timeRange::-webkit-timeRange-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--action);
+  cursor: pointer;
+}
+
+.timeRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--action);
+  cursor: pointer;
+}
+.timeRange:hover::-moz-range-thumb{
+  background: var(--action-hover);
+
+}
+
+.intervalsInput {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #e9e7e5;
+  border: 1px solid rgb(216, 202, 202);
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#title {
+
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+
+}
+
+.subTitle {
+  color: #333333da;
+
+}
+
+.timerBtn {
+  padding: 7px 10px 7px 10px;
+  color: white;
+  background: var(--action);
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+.timerBtnLarge{
+  font-size: 20px;
+  padding: 10px 21px 10px 21px;
+
+
+}
+.timerBtn:hover{
+
+  background: var(--action-hover);
+
+}
+
+
+#showTime-time{
+  font-size: 72px;
+  height: 20px;
+
+}
+.timeDisplayHere{
+margin-top: -50px;
+}
+
+.musicPlayer{
+  background: white;
+  margin-top: 50px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.239);
+  width: 85%;
+
+}
+
+.musicChoice{
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.musicChoice li{
+  margin-left: -40px;
+  background: var(--action);
+  
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.audioPlayer{
+ width: 240px;
+ border-radius: 10px;
+}
+
+@media (min-width: 620px){
+
+  .rowSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    width:500px;
+  
+  }
+  .timerSection {
+ width: 600px;
+  
+  }
+  .musicPlayer{
+    width: 600px;
+    padding: 25px;
+  }
+  .timeRange{
+    width: 450px;
+  }
+  .timerBtn {
+    padding: 10px 21px 10px 21px;    
+    color: white;
+    background: var(--action);
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+  }
+  .timerBtnLarge{
+    font-size: 33px;
+    padding: 10px 21px 10px 21px;
+  
+  
+  }
+
+}

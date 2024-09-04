@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Whisper&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yoga and Meditation Timer for home practice online" />
+    <meta name="keywords" content="Yoga, Meditation, Timer, Workout, relax, spiritual, bells, yoga music, meditation music" />
+    <meta name="Malin Stål" content="Malin Stål" />
+    <link rel="stylesheet" href="timerStyle.css" />
+    <title>yoga and meditation timer for home practice </title>
+  </head>
+  <body>
+   
+    <main class="mainContainer">
+      <section class="timerSection">
+        <h1 id="title">Yoga and Meditation Timer</h1>
+        <h2 class="subTitle">Set Timer</h2>
+
+        <div class="row">
+          <div class="clockContainer">
+            <input
+              type="text"
+              id="interval"
+              value="05"
+              min="0"
+              maxlength="2"
+              class="timeInput"
+              aria-label="Minutes"
+            />
+            <span class="colon">:</span>
+            <input
+              type="text"
+              id="intervalDecimal"
+              value="00"
+              min="0"
+              maxlength="2"
+              class="timeInput"
+              aria-label="Seconds"
+            />
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <input
+            type="range"
+            id="timeRange"
+            class="timeRange"
+            min="1"
+            max="60"
+            value="3"
+            step="1"
+            oninput="updateTime()"
+            aria-label="Adjust Timer"
+          />
+        </div>
+
+        <p>We recommend these intervals:</p>
+        <div class="row rowSpaceBetween">
+          <button class="timerBtn smallBtn">03:00</button>
+          <button class="timerBtn smallBtn">05:00</button>
+          <button class="timerBtn smallBtn">07:00</button>
+          <button class="timerBtn smallBtn">10:00</button>
+        </div>
+
+        <div class="row rowSpaceBetween">
+          <div class="col">
+            <label for="intervalQuantity">Number of Intervals</label>
+            <input
+              type="text"
+              id="intervalQuantity"
+              value="1"
+              min="0"
+              maxlength="2"
+              class="I
+              intervalsInput"
+            />
+          </div>
+          <div class="col" >
+            <label for="timeBetweenInterval">Time Between Intervals</label>
+            <input
+              type="text"
+              id="timeBetweenInterval"
+              value="30"
+              min="2"
+              maxlength="2"
+              class="intervalsInput"
+            />
+        
+          </div>
+        </div>
+
+        <audio src="music/bells.mp3" type="audio/mpeg" id="bells"></audio>
+
+        <div class="timeDisplayHere">
+          <div id="showTime">
+            <h3 id="showTime-time">05:00</h3>
+            <p id="showTime-intervall">
+              Intervals left: <strong id="showTime-intervall-strong"></strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <button id="startTimer" class="timerBtn timerBtnLarge">Start</button>
+          <button id="restartTimer" style="display: none" class="timerBtn timerBtnLarge">Restart</button>
+          <button id="pauseTimer" class="timerBtn leftBtn timerBtnLarge">Pause</button>
+        </div>
+        <img src="lotos-gold.png" alt="Golden lotus flower" width="300px" />
+      </section>
+      <section class="musicPlayer">
+        <h2>Music Player</h2>
+        <ul class="musicChoice">
+          <li>
+            <article>
+              <h3>Rain Drops</h3>
+              <audio src="music/rain.mp3" controls class="audioPlayer" aria-label="Play Rain Drops audio"></audio>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Flow Sound</h3>
+              <audio src="music/meditation-sounds-122698.mp3"  class="audioPlayer"controls aria-label="Play Flow Sound audio"></audio>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Sky Meditation</h3>
+              <audio src="music/autumn-sky-meditation-7618.mp3" class="audioPlayer" controls aria-label="Play Sky Meditation audio"></audio>
+            </article>
+          </li>
+        </ul>
+      </section>
+      
+    </main>
+
+    <footer></footer>
+    <script src="main.js" defer></script>
+  </body>
+</html>
